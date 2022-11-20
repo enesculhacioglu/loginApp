@@ -1,0 +1,281 @@
+body {
+    font-family: arial;
+    background-color: #4517BC;
+    background: -webkit-linear-gradient(top, #4517BC, #7b4dee, #FC4173);
+}
+.logo-container{
+    height: 200px;
+    width: 750px;
+    position: absolute;
+    margin: auto;
+    top: 10%;
+    left: 27.5%;
+}
+.company-name{
+    position: absolute;
+}
+.app-name-get{
+    font-family: rubik bubbles;
+    color: #FC4173;
+    font-size: 100px;
+    vertical-align: middle;
+    position: relative;
+}
+.app-name-sheep{
+    font-family: rubik bubbles;
+    color: #EA936E;
+    font-size: 125px;
+    vertical-align: middle;
+    position: relative;
+}
+.sheep-container{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin-top: 20px;
+    left: 80%;
+}
+.sheep{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+
+}
+.sheep::before{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 35px;
+    top: -10px;
+    box-shadow: 0 90px #fff, 45px 45px #fff,-45px 45px #fff,
+    -37px 20px #fff, 37px 20px #fff, 24px 7px #fff,
+    -24px 7px #fff, -24px 84px #fff,24px 84px #fff,
+    -37px 68px #fff,37px 68px #fff;  
+}
+.sheep-face{
+    background-color: #505050;
+    width: 33px;
+    height: 40px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 35px;
+    border-radius: 10px;
+}
+.sheep-ears{
+    position: absolute;
+    background-color: #303030;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px 0;
+    left: -11px;
+    top: -2px;
+}
+.sheep-ears::before{
+    position: absolute;
+    content: "";
+    background-color: #303030;
+    height: 15px;
+    width: 15px;
+    border-radius: 0 15px;
+    left: 40px;
+    top: 0;
+}
+.sheep-eyes{
+    position: absolute;
+    background-color: #252525;
+    height: 7px;
+    width: 7px;
+    left: 4px;
+    top: -2px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #fff, 0 0 0 5.5px #505050;
+}
+.sheep-eyes::before{
+    position: absolute;
+    content: "";
+    background-color: #252525;
+    height: 7px;
+    width: 7px;
+    left: 18px;
+    top: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #fff, 0 0 0 5.5px #505050;
+}
+.sheep-nose{
+    position: absolute;
+    background-color: #404040;
+    height: 3px;
+    width: 4.2px;
+    left: 15px;
+    top: 20px;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 0.5px solid #252525;
+}
+.sheep-nose::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 1px;
+    background-color: #252525;
+    left: 1.5px;
+    top: 3px;
+}
+.sheep-legs{
+    position: absolute;
+    background-color: #505050;
+    height: 20px;
+    width: 5px;
+    left: 52.5px;
+    top: 125px;
+    box-shadow: 40px 0 #505050;
+}
+.sheep-shadow{
+    width: 75px;
+    height: 2px;
+    background-color: rgba(61, 49, 0, 0.15);
+    position: absolute;
+    top: 120px;
+    margin:auto;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+}
+.login-container{
+    overflow: hidden;
+    height: 400px;
+    width: 370px;
+    background-color: wheat;
+    position: absolute;
+    top: 35%;
+    bottom: 20%;
+    left: 37.5%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #4517BC inset;
+    place-items: center;
+}
+.login-container .form-container{
+    width: 100%;
+    overflow: hidden;
+}
+.form-container .slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 99%;
+    margin: 30px 0 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: space-between;
+    border: 1px solid lightslategrey;
+}
+.slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    color: #FC4173;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+.slide-controls .signup{
+    color: #000;
+}
+.slide-controls .slide-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background: -webkit-linear-gradient(left,#280c6d, #541ddd);
+}
+input[type="radio"]{
+    display: none;
+}
+#signup:checked ~ .slide-tab{
+    left: 50%;
+}
+#signup:checked ~ .signup{
+    color: #FC4173;
+}
+#signup:checked ~ .login{
+    color: #000;
+}
+.form-container .form-inner{
+    display: flex;
+    width: 200%;
+}
+.form-container .form-inner form{
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-container .form-inner form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.form-inner form .field input{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.form-inner .field .boxes{
+    width: 94%;
+}
+.form-inner form .field input:focus{
+    border-color: #4517BC;
+}
+.form-inner form .pass-link{
+    margin-top: 5px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+    color: #4517BC;
+    text-decoration: none;
+}
+.form-inner form .signup-link{
+    text-align: center;
+    margin-top: 30px;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+    text-decoration: underline;
+}
+form .field input[type="submit"]{
+    color: #4517BC;
+    font-size: 20px;
+    font-weight: 550;
+    border: none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(left, #FC4173, #EA936E);
+}
+.author-name{
+    position: relative;
+    text-align: center;
+    margin-top: 50%;
+}
+
